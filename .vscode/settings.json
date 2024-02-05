@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "windows.h": "c",
+        "bluetoothapis.h": "c",
+        "bthdef.h": "c",
+        "initguid.h": "c",
+        "guiddef.h": "c",
+        "devguid.h": "c"
+    }
+}
