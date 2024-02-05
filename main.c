@@ -1,5 +1,4 @@
 #include <windows.h>
-#include <devguid.h>
 #include <stdio.h>
 #include <initguid.h>
 #include <bluetoothapis.h>
@@ -7,6 +6,20 @@
 #include <bthledef.h>
 #include <devguid.h>
 #include <setupapi.h>
+
+void CALLBACK notify(BTH_LE_GATT_EVENT_TYPE EventType, PVOID EventOutParameter, PVOID Context)
+{
+    printf("Event\n");
+    switch (EventType)
+    {
+    case CharacteristicValueChangedEvent:
+        printf("CharacteristicValueChangedEvent\n");
+        break;
+    default:
+        printf("Unknown event\n");
+        break;
+    }
+}
 
 int main()
 {
@@ -187,7 +200,38 @@ int main()
             if(pCharacteristicBuffer[j].HasExtendedProperties){
                 printf("Has extended properties\n");
             }
-
+            if(pCharacteristicBuffer[j].CharacteristicUuid.Value.ShortUuid != 0x2A00){
+                continue;
+            }
+            printf("Cycling Power Measurement\n");
+            USHORT size;
+            hr = BluetoothGATTGetCharacteristicValue(handle, &pCharacteristicBuffer[j], 0, NULL, &size, BLUETOOTH_GATT_FLAG_NONE);
+            if(hr != HRESULT_FROM_WIN32(ERROR_MORE_DATA))
+            {
+                printf("Error: BluetoothGATTGetCharacteristicValue failed\n");
+                printf("Error code: %08x\n", hr);
+                return 1;
+            }
+            printf("Size: %d\n", size);
+            BTH_LE_GATT_CHARACTERISTIC_VALUE *value = (BTH_LE_GATT_CHARACTERISTIC_VALUE *)malloc(size);
+            if(value == NULL)
+            {
+                printf("Error: malloc failed\n");
+                return 1;
+            }
+            hr = BluetoothGATTGetCharacteristicValue(handle, &pCharacteristicBuffer[j], size, value, &size, BLUETOOTH_GATT_FLAG_NONE);
+            if(hr != S_OK)
+            {
+                printf("Error: BluetoothGATTGetCharacteristicValue failed\n");
+                printf("Error code: %08x\n", hr);
+                return 1;
+            }
+            printf("Value: ");
+            for(int k = 0; k < size; k++)
+            {
+                printf("%02x ", value->Data[k]);
+            }
+            printf("\n");
         }
 
     }
