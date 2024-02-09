@@ -5,6 +5,7 @@
         "bthdef.h": "c",
         "initguid.h": "c",
         "guiddef.h": "c",
-        "devguid.h": "c"
+        "devguid.h": "c",
+        "iostream": "cpp"
     }
 }
