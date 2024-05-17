@@ -8,20 +8,86 @@ workout = {
         {
             'name': 'Warmup',
             'description': 'Warmup',
-            'duration': 20,
+            'duration': 60,
             'power': 100
+        },
+        {
+            'name': 'Warmup',
+            'description': 'Warmup',
+            'duration': 60,
+            'power': 120
+        },
+        {
+            'name': 'Warmup',
+            'description': 'Warmup',
+            'duration': 60,
+            'power': 140
+        },
+        {
+            'name': 'Warmup',
+            'description': 'Warmup',
+            'duration': 60,
+            'power': 160
+        },
+        {
+            'name': 'Warmup',
+            'description': 'Warmup',
+            'duration': 60,
+            'power': 170
         },
         {
             'name': 'Interval',
             'description': 'Interval',
-            'duration': 20,
+            'duration': 299,
             'power': 200
+        },
+        {
+            'name': 'Interval',
+            'description': 'Interval',
+            'duration': 299,
+            'power': 180
+        },
+        {
+            'name': 'Interval',
+            'description': 'Interval',
+            'duration': 299,
+            'power': 200
+        },
+        {
+            'name': 'Interval',
+            'description': 'Interval',
+            'duration': 299,
+            'power': 180
         },
         {
             'name': 'Cooldown',
             'description': 'Cooldown',
-            'duration': 20,
+            'duration': 60,
+            'power': 160
+        },
+        {
+            'name': 'Cooldown',
+            'description': 'Cooldown',
+            'duration': 60,
+            'power': 140
+        },
+        {
+            'name': 'Cooldown',
+            'description': 'Cooldown',
+            'duration': 60,
+            'power': 120
+        },
+        {
+            'name': 'Cooldown',
+            'description': 'Cooldown',
+            'duration': 60,
             'power': 100
+        },
+        {
+            'name': 'Cooldown',
+            'description': 'Cooldown',
+            'duration': 60,
+            'power': 80
         }
     ]
 }
