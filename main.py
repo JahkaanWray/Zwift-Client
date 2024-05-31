@@ -9,6 +9,12 @@ workout = {
             'name': 'Warmup',
             'description': 'Warmup',
             'duration': 60,
+            'power': 80
+        },
+        {
+            'name': 'Warmup',
+            'description': 'Warmup',
+            'duration': 60,
             'power': 100
         },
         {
@@ -30,34 +36,52 @@ workout = {
             'power': 160
         },
         {
-            'name': 'Warmup',
-            'description': 'Warmup',
-            'duration': 60,
-            'power': 170
+            'name': 'Interval',
+            'description': 'Interval',
+            'duration': 299,
+            'power': 192
         },
         {
             'name': 'Interval',
             'description': 'Interval',
             'duration': 299,
-            'power': 200
+            'power': 177
         },
         {
             'name': 'Interval',
             'description': 'Interval',
             'duration': 299,
-            'power': 180
+            'power': 192
         },
         {
             'name': 'Interval',
             'description': 'Interval',
             'duration': 299,
-            'power': 200
+            'power': 177
         },
         {
             'name': 'Interval',
             'description': 'Interval',
             'duration': 299,
-            'power': 180
+            'power': 192
+        },
+        {
+            'name': 'Interval',
+            'description': 'Interval',
+            'duration': 299,
+            'power': 177
+        },
+        {
+            'name': 'Interval',
+            'description': 'Interval',
+            'duration': 299,
+            'power': 192
+        },
+        {
+            'name': 'Interval',
+            'description': 'Interval',
+            'duration': 299,
+            'power': 177
         },
         {
             'name': 'Cooldown',
