@@ -259,7 +259,7 @@ HANDLE getBLEHandle(GUID guid)
     }
 
     printf("%s\n", didd.DevicePath);
-    for(int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
         printf("%c", didd.DevicePath[i]);
     }
@@ -337,6 +337,7 @@ HANDLE openBleInterfaceHandle(GUID interfaceUUID, DWORD dwDesiredAccess)
                 if (!SetupDiGetDeviceInterfaceDetail(hDI, &did, pInterfaceDetailData, size, &size, &dd))
                     break;
 
+                printf("Device Path: %s\n", pInterfaceDetailData->DevicePath);
                 handle = CreateFile(
                     pInterfaceDetailData->DevicePath,
                     dwDesiredAccess,
