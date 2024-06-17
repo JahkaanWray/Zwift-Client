@@ -1,11 +1,13 @@
 {
     "files.associations": {
+        ".fantomasignore": "ignore",
         "windows.h": "c",
         "bluetoothapis.h": "c",
         "bthdef.h": "c",
         "initguid.h": "c",
         "guiddef.h": "c",
         "devguid.h": "c",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "windows.devices.bluetooth.h": "c"
     }
 }
